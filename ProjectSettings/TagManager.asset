@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - 3dBG
+  - 2dGamePlay
+  - 2dOverlay
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BGElements
+    uniqueID: 1357142105
+    locked: 0
+  - name: GamePlay
+    uniqueID: 4248781209
+    locked: 0
+  - name: UI
+    uniqueID: 2673565747
     locked: 0
