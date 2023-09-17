@@ -39,17 +39,20 @@ public class BGMovementManager : MonoBehaviour
         foreach (BGBlock block in SpawnedBGBlocks)
         {
             block.transform.position = new Vector3(block.transform.position.x - movementSpeed, block.transform.position.y, block.transform.position.z);
+
+        }
+
+        foreach (BGBlock block in SpawnedBGBlocks)
+        {
             if (block.transform.position.x < panelLimit)
             {
                 ResetBlockPosition(SpawnedBGBlocks.IndexOf(block));
             }
 
         }
-
-
     }
 
-    void ResetBlockPosition (int index)
+        void ResetBlockPosition (int index)
     {
         float maxPos = 0;
 
@@ -59,6 +62,7 @@ public class BGMovementManager : MonoBehaviour
                 maxPos = SpawnedBGBlocks[i].transform.position.x;
 
         }
+        SpawnedBGBlocks[index].ResetBlock();
 
         SpawnedBGBlocks[index].transform.position = new Vector3(maxPos + panelWidth, 0, 0);
 
