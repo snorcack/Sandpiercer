@@ -38,7 +38,7 @@ public class BGMovementManager : MonoBehaviour
     {
         foreach (BGBlock block in SpawnedBGBlocks)
         {
-            block.transform.position = new Vector3(block.transform.position.x - movementSpeed, block.transform.position.y, block.transform.position.z);
+            block.transform.position = new Vector3(block.transform.position.x - movementSpeed*Time.deltaTime, block.transform.position.y, block.transform.position.z);
 
         }
 
